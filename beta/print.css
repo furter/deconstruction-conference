@@ -1,0 +1,48 @@
+
+.no-print {
+    display: none;
+}
+.print-poster-container {
+    width: 200mm;
+    height: 267mm;
+    margin-top: -1cm;
+    border: 2px solid black;
+}
+nav {
+    display: none;
+}
+.text {
+    margin-left: 0px;
+}
+h1 {
+    font-size: 250px;
+    line-height: 210px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+h2 {
+    page-break-before: always;
+    margin-top: 20px;
+}
+h3 {
+    page-break-after: avoid;
+}
+.cover-info {
+    display: none;
+    position: absolute;
+    top: 1.5cm;
+    right: 0;
+}
+
+@page {
+    width: 200mm;
+    height: 267mm;
+}
+@page :left {
+    margin-left: 2cm;
+    margin-right: 4cm;
+}
+@page :right {
+    margin-left: 4cm;
+    margin-right: 2cm;
+}
