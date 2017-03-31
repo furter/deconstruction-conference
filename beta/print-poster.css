@@ -40,10 +40,10 @@ h3 {
 }
 .cover-info {
     position: absolute;
-    top: 9mm;
+    top: 7mm;
     left: 13cm;
-    font-size: 35pt;
-    line-height: 37pt;
+    font-size: 34pt;
+    line-height: 35pt;
     width: 25cm;
 }
 .cover-info p {

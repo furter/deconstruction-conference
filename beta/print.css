@@ -1,5 +1,5 @@
 
-.no-print {
+.no-print, .poster-only {
     display: none;
 }
 .print-poster-container {
