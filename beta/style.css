@@ -52,7 +52,6 @@ div {
     font-weight: normal;
     font-style: normal;
 }
-
 body {
     background: url(cardboard.png) repeat;
     background-size: 300px 300px;
@@ -158,6 +157,9 @@ td:first-of-type {
 
 @media screen {
     .no-screen {
+        display: none;
+    }
+    .poster-only {
         display: none;
     }
     .cover-info {
