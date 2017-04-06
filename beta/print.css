@@ -1,37 +1,182 @@
-
-.no-print, .poster-only {
+.no-print, .no-print-booklet, .poster-only {
     display: none;
 }
-.print-poster-container {
+.print-page {
     width: 200mm;
     height: 267mm;
-    margin-top: -1cm;
     border: 2px solid black;
+    padding: 8mm;
+    position: relative;
+}
+body {
+    background: none;
+    font-size: 11pt ;
+}
+a.underlined-link {
+    border-bottom: 0.5mm solid black;
 }
 nav {
     display: none;
 }
+img {
+    max-width: 12cm;
+    max-height: 12cm;
+}
+figure {
+    margin-bottom: 1cm;
+}
+figcaption {
+    font-size: 10pt;
+}
 .text {
+    float: none;
     margin-left: 0px;
+}
+.print-page p {
+    width: 15cm;
+}
+.two-columns {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    columns: 2;
+    -webkit-column-gap: 8mm; /* Chrome, Safari, Opera */
+    -moz-column-gap: 8mm; /* Firefox */
+    column-gap: 8mm;
+}
+.three-columns {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    columns: 3;
+    -webkit-column-gap: 8mm; /* Chrome, Safari, Opera */
+    -moz-column-gap: 8mm; /* Firefox */
+    column-gap: 8mm;
+}
+.two-columns p, .three-columns p {
+    width: auto;
+}
+.folio-left {
+    position: absolute;
+    left: 8mm;
+    bottom: 7mm;
+}
+.running-title-left {
+    position: absolute;
+    left: 16mm;
+    bottom: 7mm;
+}
+.folio-right {
+    position: absolute;
+    right: 8mm;
+    bottom: 7mm;
+}
+.running-title-right {
+    position: absolute;
+    right: 16mm;
+    bottom: 7mm;
 }
 h1 {
     font-size: 250px;
     line-height: 210px;
     margin-top: 0px;
-    margin-left: 0px;
-}
-h2 {
-    page-break-before: always;
-    margin-top: 20px;
-}
-h3 {
-    page-break-after: avoid;
+    margin-left: 0cm;
+    padding: 0;
 }
 .cover-info {
-    display: none;
     position: absolute;
-    top: 1.5cm;
-    right: 0;
+    top: 8mm;
+    left: 6.3cm;
+    font-size: 13pt;
+    line-height: 14.5pt;
+}
+.cover-info p {
+    margin-bottom: 3mm;
+    width: 10cm;
+}
+.logo-cover {
+    position: absolute;
+    bottom: 1cm;
+    left: 1cm;
+}
+.logo-cover img {
+    width: 7cm;
+}
+h2 {
+    display: none;
+}
+h3 {
+    font-size: 12pt;
+    page-break-after: avoid;
+    border-bottom: 0.6mm solid black;
+    padding-bottom: 0.5mm;
+}
+.booklet-quote {
+    font-size: 14pt;
+}
+.booklet-quote-caption {
+    padding-top: 8mm;
+    font-size: 10pt;
+}
+.booklet-quote td {
+    width: 6cm;
+}
+.booklet-quote td {
+    padding-top: 0;
+}
+.booklet-quote td:first-of-type {
+width: 1.5cm;
+}
+#print-page-1, #print-page-2, #print-page-31, #print-page-32 {
+    background: url(cardboard.png) repeat;
+    background-size: 300px 300px;
+}
+#print-page-7 td {
+    width: 13cm;
+    padding-top: 0;
+}
+#print-page-7 td:first-of-type {
+    width: 1.5cm;
+}
+#program h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    border: 0;
+}
+#program td {
+    padding-top: 5mm;
+}
+#program td:first-of-type {
+    width: 1.5cm;
+}
+#program p {
+    width: 12cm;
+}
+#speakers h2 {
+    margin-bottom: 0;
+}
+#speakers p {
+    font-size: 7.7pt;
+    padding-top: 0;
+}
+#speakers ul {
+    font-size: 7.7pt;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+}
+.booklet-colophon h4, .booklet-colophon p, .booklet-colophon li {
+    font-size: 9pt;
+}
+.booklet-theme-backcover {
+    font-size: 13pt;
+}
+.booklet-theme-backcover .theme-questions {
+    padding-left: 1.5cm;
+    width: 13.5cm;
+}
+.print-footer {
+    position: absolute;
+    bottom: 1cm;
+    left: 1cm;
 }
 
 @page {
@@ -39,10 +184,10 @@ h3 {
     height: 267mm;
 }
 @page :left {
-    margin-left: 2cm;
-    margin-right: 4cm;
+    margin-left: 0;
+    margin-right: 0;
 }
 @page :right {
-    margin-left: 4cm;
-    margin-right: 2cm;
+    margin-left: 0;
+    margin-right: 0;
 }

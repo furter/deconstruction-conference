@@ -150,6 +150,9 @@ td:first-of-type {
     padding-top: 25px;
     margin-left: 60px;
 }
+#speakers h2 {
+    margin-bottom: -40px;
+}
 .logo {
     margin-top: 30px;
     width: 400px;
@@ -162,6 +165,9 @@ td:first-of-type {
     .poster-only {
         display: none;
     }
+    .booklet-only {
+        display: none;
+    }
     .cover-info {
         position: absolute;
         top: 70px;
@@ -170,5 +176,45 @@ td:first-of-type {
         padding: 20px 20px 0 20px;
         background-color: white;
         z-index: 2000;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .small-screen-only {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .big-screen-only {
+        display: none;
+    }
+    nav li {
+        float: left;
+        list-style: none;
+        padding: 2px 0;
+        margin-left: 10px;
+    }
+    h1 {
+        float: none;
+        margin-left: 5px;
+    }
+    .cover-info {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .text {
+        width: 90%;
+        margin-left: 10px;
+        word-wrap: break-word;
+    }
+    .logo {
+        width: 90%;
+    }
+
+    #LionelDevlieger {
+        padding-top: 40px;
     }
 }
